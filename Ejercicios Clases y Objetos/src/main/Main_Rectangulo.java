@@ -1,6 +1,6 @@
-package Main;
+package main;
 
-import Ejercicio5.Rectangulo;
+import ejercicio5.Rectangulo;
 
 public class Main_Rectangulo {
 

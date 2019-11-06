@@ -1,6 +1,6 @@
-package Main;
+package main;
 
-import Ejercicio1.Persona;
+import ejercicio1.Persona;
 
 public class Main_Persona {
 

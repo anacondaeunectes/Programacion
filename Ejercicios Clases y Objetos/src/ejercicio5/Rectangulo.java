@@ -1,4 +1,4 @@
-package Ejercicio5;
+package ejercicio5;
 //Forma larga y tosca.
 public class Rectangulo {
 	

@@ -1,6 +1,6 @@
-package Main;
+package main;
 
-import Ejercicio4.Conversion;
+import ejercicio4.Conversion;
 
 public class Main_Conversion {
 

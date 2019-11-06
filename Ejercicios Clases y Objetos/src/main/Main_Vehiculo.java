@@ -1,6 +1,6 @@
-package Main;
+package main;
 
-import Ejercicio2.Vehiculo;		//Importo la clase Vehiculo para poder llamar a sus atributos y métodos 
+import ejercicio2.Vehiculo;
 
 public class Main_Vehiculo {
 

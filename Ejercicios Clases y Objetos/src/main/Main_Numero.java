@@ -1,6 +1,6 @@
-package Main;
+package main;
 
-import Ejercicio3.Numero;
+import ejercicio3.Numero;
 
 public class Main_Numero {
 
