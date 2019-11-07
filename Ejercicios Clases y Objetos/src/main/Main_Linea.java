@@ -9,6 +9,7 @@ public class Main_Linea {
 		Punto p2=new Punto(1,5);
 		Linea l1=new Linea(p1,p2);
 		
+		System.out.println(l1.getPosicion());
 	}
 
 }
