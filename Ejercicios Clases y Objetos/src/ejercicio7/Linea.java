@@ -1,15 +1,15 @@
 package ejercicio7;
 
 public class Linea {
-	private Punto PuntoA;
-	private Punto PuntoB;
+	private Punto p1;
+	private Punto p2;
 	
-	public Linea(int x1, int y1, int x2, int y2) {
-		PuntoA=new Punto(x1, y1);
-		PuntoB=new Punto(x2, y2);
+	public Linea(Punto p1, Punto p2) {
+		p1=new Punto(0,0);
+		p2=new Punto(0,0);
 	} 
 	 public String getPosicion() {
-		 return "[puntoA,puntoB] -> [("+PuntoA.getX1()+","+PuntoA.getY1()+"),("+PuntoB.getX1()+","+PuntoB.getY1()+")";
+		 return "[puntoA,puntoB] -> [("+p1.getX()+","+p1.getY()+"),("+p2.getX()+","+p2.getY()+")";
 	 }
 }
 
