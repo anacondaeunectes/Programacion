@@ -1,4 +1,4 @@
-package ejercicio5;
+package ejercicio5_fitness;
 
 public class Punto {
 	float x;
