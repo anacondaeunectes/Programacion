@@ -6,8 +6,9 @@ public class main_Datos_solicitando {
 
 	public static void main(String[] args) {
 		Datos d1=new Datos();
-		System.out.println(d1.muestraDVDCine());
+		d1.setGenero();
 		System.out.println(d1.esThriller());
+		System.out.println(d1.muestraDVDCine());
 	}
 
 }
