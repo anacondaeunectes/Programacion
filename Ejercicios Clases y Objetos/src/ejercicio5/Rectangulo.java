@@ -1,28 +1,39 @@
 package ejercicio5;
-/*@author PGut
- * @sinceNov2019*/
+
 public class Rectangulo {
+	private Punto a, b, c, d;
+	private double base, altura;
 	
-	private int x1, y1, x2, y2, x3, y3, x4, y4, base, altura;
+	//Constructores
+	public Rectangulo(Punto a, Punto b, Punto c, Punto d) {
+		this.a=new Punto(a.getX(),a.getY());
+		this.b=new Punto(b.getX(),b.getY());
+		this.c=new Punto(c.getX(),c.getY());
+		this.d=new Punto(d.getX(),d.getY());
+	}
+	public Rectangulo(double base, double altura) {
+		this.base=base;
+		this.altura=altura;
+	}
+	//Métodos
 	
-	public Rectangulo(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4) {
-		this.x1=x1;
-		this.x2=x2;
-		this.x3=x3;
-		this.x4=x4;
-		this.y1=y1;
-		this.y2=y2;
-		this.y3=y3;
-		this.y4=y4;
-		base=x2-x1;
-		altura=y3-y1;
+	/*
+	 *Este método haría la función de calcular  la superficie independientemente del construcotr que se haya usado para inicializar el resctángulo a través de 
+	 *la estructura "if". Si la base es 0 significaría que se ha usado el constructor de los 4 puntos ya que no tiene sentido que la base sea 0.
+	 *
+	public double getSuperficie() { 
+		if (base==0) {		
+			base=a.getX()-b.getX();
+			altura=a.getY()-c.getY();
+		}
+		return base*altura;
+	}*/
+	
+	public void setBaseYAltura() {
+		base=a.getX()-b.getX();
+		altura=a.getY()-c.getY();	
 	}
-	public Rectangulo(int x2, int y2, int x3, int y3, int x4, int y4) {
-		base=x2;
-		altura=y3;
-	}
-	public int getSuperficie() {	
+	public double getSuperficie() {
 		return base*altura;
 	}
-	
 }

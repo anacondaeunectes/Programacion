@@ -17,20 +17,20 @@ public class Datos {
 				}
 	public String esThriller() {
 		if (esThriller==true) {
-			return "SÃ­, es un thriller.";
+			return "Sí, es un thriller.";
 		}else {
 			return "No, no es un thriller.";
 		}
 	}
 	public String tieneResumen() {
 		if (tieneResumen==true) {
-			return "SÃ­, tiene resumen.";
+			return "Sí, tiene resumen.";
 		}else {
 			return "No, no tiene resumen.";
 		}
 	}
 	public String muestraDuracion() {
-		return "La duraciÃ³n es de "+duracion+" minutos.";
+		return "La duración es de "+duracion+" minutos.";
 	}
 }
 
