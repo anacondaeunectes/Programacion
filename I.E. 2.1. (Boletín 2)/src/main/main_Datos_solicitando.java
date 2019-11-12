@@ -18,6 +18,7 @@ public class main_Datos_solicitando {
 		System.out.println(d1.esThriller());
 		System.out.println(d1.tieneResumen());
 		System.out.println(d1.muestraDuracion());
+		
 	}
 
 }

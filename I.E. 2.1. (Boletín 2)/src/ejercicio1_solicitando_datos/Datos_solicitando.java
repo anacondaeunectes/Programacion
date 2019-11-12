@@ -20,43 +20,37 @@ public class Datos_solicitando {
 		this.duracion=duracion;
 	}
 
-	
+	Scanner teclado=new Scanner(System.in);
 	public void setResumen() {
-		System.out.println("Introduzca el resumen de la película: ");
-		Scanner scannerResumen=new Scanner(System.in);
-		this.resumen=scannerResumen.nextLine();
+		System.out.println("Introduzca el resumen de la pelicula: ");
+		this.resumen=teclado.nextLine();
 	}
 	public void setTitulo() {
-		System.out.println("Introduzca el título de la película: ");
-		Scanner scannerTitulo=new Scanner(System.in);
-		this.titulo=scannerTitulo.nextLine();
+		System.out.println("Introduzca el titulo de la pelicula: ");
+		this.titulo=teclado.nextLine();
 	}
 	public void setDirector() {
-		System.out.println("Introduzca el director  de la película: ");
-		Scanner scannerDirector=new Scanner(System.in);
-		this.director=scannerDirector.nextLine();
+		System.out.println("Introduzca el director  de la pelicula: ");
+		this.director=teclado.nextLine();
 	}
 	public void setActores() {
-		System.out.println("Introduzca los principales actores que aparecen en la película: ");
-		Scanner scannerActores=new Scanner(System.in);
-		this.actores=scannerActores.nextLine();
+		System.out.println("Introduzca los principales actores que aparecen en la pelicula: ");
+		this.actores=teclado.nextLine();
 	}
 	public void setGenero() {
-		System.out.println("Introduzca el género de la película: ");
-		Scanner scannerGenero=new Scanner(System.in);
-		this.genero=scannerGenero.nextLine();
+		System.out.println("Introduzca el genero de la pelicula: ");
+		this.genero=teclado.nextLine();
 	}
 	public void setDuracion() {
-		System.out.println("Introduzca la duración  de la película: ");
-		Scanner scannerDuracion=new Scanner(System.in);
-		this.duracion=scannerDuracion.nextInt();
+		System.out.println("Introduzca la duracion  de la pelicula: ");
+		this.duracion=teclado.nextInt();
 	}
 	public String muestraDVDCine() {
 		return titulo+" De: "+director+"\nCon: "+actores+"\n"+genero+"-"+duracion+" min.\nResumen: "+resumen;
 	}
 	public String esThriller() {
 		if (genero.equals("Thriller") || (genero.equals("thriller"))) {
-			return "Sí, es un thriller.";
+			return "Si, es un thriller.";
 		}else {
 			return "No, no es un thriller.";
 		}
@@ -65,11 +59,11 @@ public class Datos_solicitando {
 		if (resumen.isEmpty()) {
 			return "No, no tiene resumen.";
 		}else {
-			return "Sí, tiene resumen.";
+			return "Si, tiene resumen.";
 		}
 	}
-	public int muestraDuracion() {
-		return duracion;
+	public String muestraDuracion() {
+		return "La duracion es de "+duracion+" min.";
 	}
 	
 }
