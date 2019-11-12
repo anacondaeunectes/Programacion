@@ -1,6 +1,6 @@
 package main;
 
-import ejercicio1.Datos;
+import ej1_DVD.Datos;
 
 public class Main_Datos {
 

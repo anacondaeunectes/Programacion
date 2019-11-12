@@ -1,6 +1,6 @@
 package main;
 
-import ejercicio1_solicitando_datos.Datos_solicitando;
+import ej1_solicitando_datos_DVD.Datos_solicitando;
 
 public class main_Datos_solicitando {
 

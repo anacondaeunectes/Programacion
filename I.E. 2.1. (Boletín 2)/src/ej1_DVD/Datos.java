@@ -1,4 +1,4 @@
-package ejercicio1;
+package ej1_DVD;
 
 public class Datos {
 	public String descripcion;
@@ -17,20 +17,20 @@ public class Datos {
 				}
 	public String esThriller() {
 		if (esThriller==true) {
-			return "Sí, es un thriller.";
+			return "Sï¿½, es un thriller.";
 		}else {
 			return "No, no es un thriller.";
 		}
 	}
 	public String tieneResumen() {
 		if (tieneResumen==true) {
-			return "Sí, tiene resumen.";
+			return "Sï¿½, tiene resumen.";
 		}else {
 			return "No, no tiene resumen.";
 		}
 	}
 	public String muestraDuracion() {
-		return "La duración es de "+duracion+" minutos.";
+		return "La duraciï¿½n es de "+duracion+" minutos.";
 	}
 }
 

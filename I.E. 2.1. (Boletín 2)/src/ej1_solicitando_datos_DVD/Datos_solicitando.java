@@ -1,4 +1,4 @@
-package ejercicio1_solicitando_datos;
+package ej1_solicitando_datos_DVD;
 
 import java.util.Scanner;
 
@@ -12,13 +12,15 @@ public class Datos_solicitando {
 	
 	public Datos_solicitando() {
 	}
-	public Datos_solicitando(String resumen, String titulo, String genero, String director, int duracion) {
+	/*
+	 * 	NO TIENE SENTIDO ESTE COSNTRUCTOR SI LE PIDO LOS DATOS AL USUARIO
+	 * public Datos_solicitando(String resumen, String titulo, String genero, String director, int duracion) {
 		this.resumen=resumen;
 		this.titulo=titulo;
 		this.genero=genero;
 		this.director=director;
 		this.duracion=duracion;
-	}
+	}*/
 
 	Scanner teclado=new Scanner(System.in);
 	public void setResumen() {
