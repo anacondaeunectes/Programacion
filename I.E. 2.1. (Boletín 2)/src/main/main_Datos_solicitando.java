@@ -5,7 +5,7 @@ import ej1_solicitando_datos_DVD.Datos_solicitando;
 public class main_Datos_solicitando {
 
 	public static void main(String[] args) {
-		Datos_solicitando d1=new Datos_solicitando();
+		Datos_solicitando d1 = new Datos_solicitando();
 
 		d1.setResumen();
 		d1.setTitulo();

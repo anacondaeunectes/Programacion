@@ -7,30 +7,30 @@ public class Datos {
 	private int duracion;
 	
 	public Datos(String descripcion, boolean thriller, boolean resumen, int duracion) {
-		this.descripcion=descripcion;
-		this.esThriller=thriller;
-		this.tieneResumen=resumen;
-		this.duracion=duracion;
+		this.descripcion = descripcion;
+		this.esThriller = thriller;
+		this.tieneResumen = resumen;
+		this.duracion = duracion;
 	}
 	public String muestraDVDCine() {
 		return descripcion; 
 				}
 	public String esThriller() {
-		if (esThriller==true) {
-			return "S�, es un thriller.";
+		if (esThriller == true) {
+			return "Si, es un thriller.";
 		}else {
 			return "No, no es un thriller.";
 		}
 	}
 	public String tieneResumen() {
-		if (tieneResumen==true) {
-			return "S�, tiene resumen.";
+		if (tieneResumen == true) {
+			return "Si, tiene resumen.";
 		}else {
 			return "No, no tiene resumen.";
 		}
 	}
 	public String muestraDuracion() {
-		return "La duraci�n es de "+duracion+" minutos.";
+		return "La duracion es de "+duracion+" minutos.";
 	}
 }
 

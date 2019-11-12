@@ -5,7 +5,7 @@ import ej1_DVD.Datos;
 public class Main_Datos {
 
 	public static void main(String[] args) {
-		Datos d1=new Datos("UN FINAL MADE IN HOLLYWOOD (HOLLYWOOD ENDING) De: Woody\n" + 
+		Datos d1 = new Datos("UN FINAL MADE IN HOLLYWOOD (HOLLYWOOD ENDING) De: Woody\n" + 
 				"Allen\n" + 
 				"Con: Woody Allen y George Hamilton\n" + 
 				"Comedia - 114 min.\n" + 
