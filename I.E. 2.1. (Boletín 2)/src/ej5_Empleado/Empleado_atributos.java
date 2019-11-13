@@ -1,26 +1,25 @@
 package ej5_Empleado;
 
-
-
-public class Empleado {
+public class Empleado_atributos {
 	private String NIF;
-	private double sueldoBase, pagoHorasExtras, horasExtrasMes, tipoIRPF;
+	private double sueldoBase, pagoHorasExtras, horasExtrasMes, tipoIRPF, complemento, sueldoBruto;
 	private boolean casado;
 	private int numHijos;
 	
 	
-	public Empleado(String dni) {
+	public Empleado_atributos(String dni) {
 		this.NIF = dni;
 	}
 	//Ademas, se ha de crear un constructor vacio para el caso en el que no se introduzca dni. 
-	public Empleado() {
+	public Empleado_atributos() {
 	}
 	public String getNIF() {
 		return NIF;
 	}
 	
+	//CREACION SCANNER PARA METODOS
 	
-	//ACCEDENTES Y MUTADORES
+	//ACCEDENTES Y MUTADORES BASICOS
 	public double getSueldoBase() {
 		return sueldoBase;
 	}
@@ -56,14 +55,18 @@ public class Empleado {
 			this.tipoIRPF = tipoIRPF;
 		}
 	}
-	public boolean isCasado() {
-		return casado;
+	public String isCasado() {
+		if (casado == true) {
+			return "Casado";
+		}else {
+			return "No casado";
+		}
 	}
 	public void setCasado(boolean casado) {
 		this.casado = casado;
 	}
-	public int getNumHijos() {
-		return numHijos;
+	public String getNumHijos() {
+		return "tiene "+numHijos+" hijos.";
 	}
 	public void setNumHijos(int numHijos) {
 		this.numHijos = numHijos;
@@ -74,28 +77,32 @@ public class Empleado {
 	
 	//OTROS METODOS
 	public double getComplemento() {
-		return pagoHorasExtras*horasExtrasMes;
+		complemento=pagoHorasExtras*horasExtrasMes;
+		return complemento;
 	}
 	public double getSueldoBruto() {
-		return sueldoBase + getComplemento();
+		sueldoBruto=sueldoBase + complemento;
+		return sueldoBruto;
 	}
-	public double getRetenciones() {
-		if(casado == true) {
-			tipoIRPF = tipoIRPF-2;
+	public void descuentoIRPF() {
+	if(casado == true) {
+			tipoIRPF = tipoIRPF - 2;
 		} 
 		if(numHijos > 0) {
-			tipoIRPF = tipoIRPF-numHijos;
+			tipoIRPF = tipoIRPF - numHijos;
 		}
-		return getSueldoBruto() * (tipoIRPF/100);
+	}	
+	public double getRetenciones() {	
+		return (sueldoBruto * tipoIRPF/100);
 	}
 	public String println() {
 		return "NIF: "+NIF+"\n"+"Estado civil: "+isCasado()+" y "+getNumHijos();
 	}
 	public String printAll() {
-		return 	"NIF: "+NIF+"\n"+"Estado civil: "+isCasado()+" y "+getNumHijos()+"\n"+"Su sueldo base es de: "+getSueldoBase()+
+		return "NIF: "+NIF+"\n"+"Estado civil: "+isCasado()+" y "+getNumHijos()+"\n"+"Su sueldo base es de: "+getSueldoBase()+
 				"\n"+"Tiene un complememento por las horas extras realizadas al mes de: "+getComplemento()+"\n"+
 				"El sueldo bruto es de: "+getSueldoBruto()+"\n"+"Su tipo de IRPF (teniendo en cuenta descuentos) es de: "
 				+getTipoIRPF()+"\n"+"Tiene una retencion por el tipo de IRPF sobre el sueldo bruto de: "
 				+getRetenciones()+"\n"+"Su suelto neto queda, por tanto, en: "+(getSueldoBruto()-getRetenciones());
-		}
 	}
+}
