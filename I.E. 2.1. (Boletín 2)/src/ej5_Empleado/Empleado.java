@@ -39,23 +39,6 @@ public class Empleado {
 	public void setHorasExtrasMes(double horasExtrasMes) {
 		this.horasExtrasMes = horasExtrasMes;
 	}
-	public double getTipoIRPF() {
-		return tipoIRPF;
-	}
-	public void setTipoIRPF(double tipoIRPF) {
-		//Con esta estructura de control busco, ademas de controlar que se introduzac un valor correcto, que este sea un porcentaje.
-		//A la hora de usar este metodo no se deberia tener en cuenta los posibles descuentos por estar casado o tener hijos.
-		if (tipoIRPF < 0 || tipoIRPF > 100) {
-			tipoIRPF=tipoIRPF*100;
-			if(tipoIRPF<0 || tipoIRPF>100) {
-				System.out.println("Ha introducido un tipo de IRPF erroneo. Por favor, introduzca un porcentaje o un valro entre o y 100");
-			}else {
-				this.tipoIRPF = tipoIRPF;
-			}
-		}else {
-			this.tipoIRPF = tipoIRPF;
-		}
-	}
 	public boolean isCasado() {
 		return casado;
 	}
@@ -68,6 +51,23 @@ public class Empleado {
 	public void setNumHijos(int numHijos) {
 		this.numHijos = numHijos;
 	}
+	public double getTipoIRPF() {
+		return tipoIRPF;
+	}
+	public void setTipoIRPF(double tipoIRPF) {
+		//Con esta estructura de control busco, ademas de controlar que se introduzac un valor correcto, que este sea un porcentaje.
+		//A la hora de usar este metodo no se deberia tener en cuenta los posibles descuentos por estar casado o tener hijos.
+		if (tipoIRPF < 0 || tipoIRPF > 100) {
+			tipoIRPF=tipoIRPF*100;
+			if(tipoIRPF<0 || tipoIRPF>100) {
+				System.out.println("Ha introducido un tipo de IRPF erroneo. Por favor, introduzca un porcentaje o un valor entre 0 y 100");
+			}else {
+				this.tipoIRPF = tipoIRPF;
+			}
+		}else {
+			this.tipoIRPF = tipoIRPF;
+		}
+	}
 	public void setNIF(String nIF) {
 		NIF = nIF;
 	}
@@ -79,13 +79,15 @@ public class Empleado {
 	public double getSueldoBruto() {
 		return sueldoBase + getComplemento();
 	}
-	public double getRetenciones() {
+	public void getDescuentos() {
 		if(casado == true) {
 			tipoIRPF = tipoIRPF-2;
 		} 
 		if(numHijos > 0) {
 			tipoIRPF = tipoIRPF-numHijos;
 		}
+	}
+	public double getRetenciones() {
 		return getSueldoBruto() * (tipoIRPF/100);
 	}
 	public String println() {
