@@ -28,7 +28,7 @@ public class Default {
 //		System.out.println(titulo.codePointAt(2));
 		
 		
-		String abcde = "abcdefghijklmnï¿½opqrstuvwxyz";
+		String abcde = "abcdefghijklmnñopqrstuvwxyz";
 		System.out.println(abcde.indexOf(ArrayTitulo[2]));
 		
 		ArrayList<Character> Repeticiones = new ArrayList<Character>();
@@ -97,14 +97,43 @@ public class Default {
 		}
 
 //		PASO 5	
+		ArrayList <Integer> Reduccion = new ArrayList<Integer>();
 		
-//	  	Reducir cada elemento ... 
-		//[8,8,6,...,6,7..,7,66]
+//		for (int i = 0; i < ArrayAscii.length; i++) {
+//			int contad=0;
+//			for (int j = 0; j < ArrayAscii.length; j++) {
+//				if(i < (ArrayAscii.length-1)) {
+//					if (ArrayAscii[i] == ArrayAscii[j] && contad < ArrayAscii[i] && ArrayAscii[i] == ArrayAscii[i-1]){
+//						contad++;
+//						Reduccion.add(i);
+//					}
+//				}else {
+//					
+//				}
+//			}
+//				
+//		}
+		
+		ArrayList <Tipo_de_Contador> tipos = new ArrayList<Tipo_de_Contador>();
+		
 		for (int i = 0; i < ArrayAscii.length; i++) {
-			if(ArrayAscii[i]) {
+			if (i == 0) {
+				Reduccion.add(i);
+				tipos.add(new Tipo_de_Contador(i));
+				tipos.get(0).sumarAlContador();
 				
+				
+			}else {
+				if (ArrayAscii[i] == ArrayAscii[i-1]) {
+					b.sumarAlContador();
+					if (b.getCont().getContador() < ArrayAscii[i]) {
+						Reduccion.add(i);
+					}
+				}
 			}
 		}
+		
+		
+		
 	}
-	
 }
