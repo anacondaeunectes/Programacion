@@ -1,6 +1,6 @@
 package main;
 
-import ej5_Empleado.Empleado_atributos;
+import ej5_Empleado_FALTA_APLICAR_CLONE.Empleado_atributos;
 
 public class main_Empleado_Atributos {
 

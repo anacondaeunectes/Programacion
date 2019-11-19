@@ -1,11 +1,11 @@
 package ej7_Asignatura;
 
 public class Asignatura {
-	private String nombre;
+	private String nombreAsignatura;
 	private double nota;
 	
 	public Asignatura(String nombre, double nota) {
-		this.nombre=nombre;
+		this.nombreAsignatura=nombre;
 		this.nota=nota;
 	}
 	public void setNota(double nota) {
@@ -22,6 +22,6 @@ public class Asignatura {
 		}
 	}
 	public String getNombreAsignatura() {
-		return nombre;
+		return nombreAsignatura;
 	}
 }

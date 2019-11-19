@@ -2,15 +2,17 @@ package ej8_Alumno;
 
 import ej7_Asignatura.Asignatura;
 
-public class Alumno extends Asignatura{
+public class Alumno {
 
 	private String nombre;
 	private int edad;
-	private Asignatura Lengua;
+	private Asignatura asignatura;
 	
-	public Alumno(String nombre, int edad) {
+	public Alumno(String nombre, int edad, String nombreAsignatura, double nota) {
 		this.nombre=nombre;
 		this.edad=edad;
+		Asignatura a1 = new Asignatura(nombreAsignatura, nota);
+		this.asignatura=a1;
 	}
 	public void setNombre(String nombre) {
 		this.nombre=nombre;
@@ -24,7 +26,16 @@ public class Alumno extends Asignatura{
 	public int getEdad() {
 		return edad;
 	}
-
+	public Asignatura getAsignatura() {
+		return asignatura;
+	}
+	
+	public String getDatosAlumnos() {
+		return "Nombre: "+getNombre()+"\n"+
+				"Edad: "+getEdad()+"\n"+
+				"Calificacion por asignatura: "+"\n"+"\t"+
+				asignatura.getNombreAsignatura()+": "+asignatura.getNota()+". "+asignatura.recogidaNotas();
+	}
 }
 	
 

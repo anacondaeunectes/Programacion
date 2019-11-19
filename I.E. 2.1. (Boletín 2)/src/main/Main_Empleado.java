@@ -1,6 +1,6 @@
 package main;
 
-import ej5_Empleado.Empleado;
+import ej5_Empleado_FALTA_APLICAR_CLONE.Empleado;
 
 public class Main_Empleado {
 
