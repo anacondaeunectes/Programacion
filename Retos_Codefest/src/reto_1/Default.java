@@ -6,7 +6,7 @@ public class Default {
 
 	public static void main(String[] args) {
 		
-//		¡¡OJO!! NO SE CONTEMPLA EN ESTE ALGORITMO QUE HAYA ESPACIOS ENTRE PALABRAS EN EL TITULO
+//		!!OJO!! NO SE CONTEMPLA EN ESTE ALGORITMO QUE HAYA ESPACIOS ENTRE PALABRAS EN EL TITULO
 		
 		
 //		PASO 1
@@ -14,7 +14,7 @@ public class Default {
 //		Variable de tipo String que albergaria el titulo original del libro
 		String titulo = "casa";		
 		
-		//Array que va a albergar cada uno de los caracteres del titulo del libro
+//		Array que va a albergar cada uno de los caracteres del titulo del libro
 		char ArrayTitulo[];		
 //		Declaracion del array
 		ArrayTitulo = new char[titulo.length()];	
@@ -24,11 +24,11 @@ public class Default {
 			ArrayTitulo[i] = titulo.charAt(i);
 		}
 		
-//		OJO, que este metodo devulve la posición de ese caracter en ASCII
+//		OJO, que este metodo devulve la posiciï¿½n de ese caracter en ASCII
 //		System.out.println(titulo.codePointAt(2));
 		
 		
-		String abcde = "abcdefghijklmnñopqrstuvwxyz";
+		String abcde = "abcdefghijklmnï¿½opqrstuvwxyz";
 		System.out.println(abcde.indexOf(ArrayTitulo[2]));
 		
 		ArrayList<Character> Repeticiones = new ArrayList<Character>();
@@ -98,8 +98,13 @@ public class Default {
 
 //		PASO 5	
 		
-//	  	ASDASD 
-		 
+//	  	Reducir cada elemento ... 
+		//[8,8,6,...,6,7..,7,66]
+		for (int i = 0; i < ArrayAscii.length; i++) {
+			if(ArrayAscii[i]) {
+				
+			}
+		}
 	}
 	
 }

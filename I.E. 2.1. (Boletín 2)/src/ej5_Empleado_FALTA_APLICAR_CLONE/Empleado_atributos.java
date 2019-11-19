@@ -1,4 +1,4 @@
-package ej5_Empleado;
+package ej5_Empleado_FALTA_APLICAR_CLONE;
 
 public class Empleado_atributos {
 	private String NIF;
