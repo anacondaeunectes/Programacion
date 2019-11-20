@@ -146,7 +146,8 @@ public class Default {
 //			}
 //		}
 		
-		
+//		https://es.stackoverflow.com/questions/42977/cu%C3%A1l-es-la-soluci%C3%B3n-a-todos-los-errores-nullpointerexception-presentes-pasados
+			
 		for (int i = 0; i < ArrayAscii.length; i++) { 		//OJO, REVISAR SI ES LOGICA EL "-1 "DEL "HASTA..."
 			if (i == 0) {
 				Reduccion.add(i);

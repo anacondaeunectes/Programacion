@@ -3,7 +3,7 @@ package reto_1;
 public class Tipo_de_Contador {
 	
 	private int numero;
-	private Contador g=getCont();
+	private Contador g;
 	
 	Tipo_de_Contador(int x){
 		this.numero=x;
