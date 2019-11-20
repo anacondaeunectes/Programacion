@@ -3,10 +3,11 @@ package reto_1;
 public class Tipo_de_Contador {
 	
 	private int numero;
-	private Contador g;
+	private Contador g=getCont();
 	
 	Tipo_de_Contador(int x){
 		this.numero=x;
+//		this.g.getContador()=getCont().setContador(0);
 	}
 	
 	public void sumarAlContador() {

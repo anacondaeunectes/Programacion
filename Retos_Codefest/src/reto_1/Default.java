@@ -147,11 +147,12 @@ public class Default {
 //		}
 		
 		
-		for (int i = 0; i < ArrayAscii.length - 1; i++) { 		//OJO, REVISAR SI ES LOGICA EL "-1 "DEL "HASTA..."
+		for (int i = 0; i < ArrayAscii.length; i++) { 		//OJO, REVISAR SI ES LOGICA EL "-1 "DEL "HASTA..."
 			if (i == 0) {
 				Reduccion.add(i);
 				tipos.add(new Tipo_de_Contador(ArrayAscii[i]));
 				tipos.get(0).sumarAlContador();
+				System.out.println(tipos.get(0).getNumero());
 				System.out.println("Tipo("+tipos.get(i).getNumero()+"). Contador va por: "+tipos.get(i).getCont().getContador());
 			}else {
 				boolean relleno=false;
