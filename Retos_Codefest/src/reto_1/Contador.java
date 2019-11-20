@@ -1,12 +1,11 @@
 package reto_1;
 
 public class Contador {
-	private static int contador;
+	private int contador;
 	
-	Contador(){
+	public void SumarAlContador() {
 		contador++;
 	}
-	
 	
 	public int getContador() {
 		return contador;

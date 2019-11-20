@@ -10,8 +10,7 @@ public class Tipo_de_Contador {
 	}
 	
 	public void sumarAlContador() {
-		Contador x= new Contador();
-		this.g=x;
+		g.SumarAlContador();
 	}
 	
 	public Contador getCont() {

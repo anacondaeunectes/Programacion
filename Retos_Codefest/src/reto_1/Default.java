@@ -78,14 +78,14 @@ public class Default {
 //		Introduzco a la vez que hago un cast de char a int(me da el valor ASCII del caracer) cada elemento de un array a otro
 		for (int i = 0; i < ArrayRepeticiones.length; i++) {			
 			ArrayAscii[i] = (int)ArrayRepeticiones[i];
-			System.out.println(ArrayAscii[i]);
+//			System.out.println(ArrayAscii[i]);
 		}
 //		PASO 3
 		
 //		Bucle que suma las cifras que conforman cada int del ArrayAscii y sustituye el valor en el Array
 		for (int i = 0; i < ArrayAscii.length; i++) {					
 			ArrayAscii[i] = (ArrayAscii[i]%10) +   ((ArrayAscii[i]/10)%10) + (((ArrayAscii[i]/10)/10)%10);
-			System.out.println(ArrayAscii[i]);
+//			System.out.println(ArrayAscii[i]);
 		}
 		
 //		PASO 4
@@ -93,7 +93,7 @@ public class Default {
 //		Aplico mod 10 a cada elemento del ArrayAscii
 		for (int i = 0; i < ArrayAscii.length; i++) {					
 			ArrayAscii[i] = ArrayAscii[i]%10 ;
-			System.out.println(ArrayAscii[i]);
+//			System.out.println(ArrayAscii[i]);
 		}
 
 //		PASO 5	
@@ -147,28 +147,29 @@ public class Default {
 //		}
 		
 		
-		for (int i = 0; i < ArrayAscii.length; i++) {
+		for (int i = 0; i < ArrayAscii.length - 1; i++) { 		//OJO, REVISAR SI ES LOGICA EL "-1 "DEL "HASTA..."
 			if (i == 0) {
 				Reduccion.add(i);
 				tipos.add(new Tipo_de_Contador(ArrayAscii[i]));
 				tipos.get(0).sumarAlContador();
+				System.out.println("Tipo("+tipos.get(i).getNumero()+"). Contador va por: "+tipos.get(i).getCont().getContador());
 			}else {
 				boolean relleno=false;
-				for (int j = 0; j < tipos.size(); j++) {				
+				for (int j = 0; j < tipos.size() - 1; j++) {				//OJO, REVISAR SI ES LOGICA EL "-1 "DEL "HASTA..."
 					if (ArrayAscii[i] == tipos.get(j).getNumero()) {		//va a ver si es de un tipo de contador
 						relleno=true;
 						if (ArrayAscii[i] == ArrayAscii[i-1]) {				//si es igual al anterior elemento del ArrayAscii, lo guarda en el mismo tipo de contador, sino crea uno nuevo
 							tipos.get(j).sumarAlContador();
 						}else {
 							tipos.add(new Tipo_de_Contador(ArrayAscii[i]));
-							tipos.get(j).sumarAlContador();
+							tipos.get(j+1).sumarAlContador();
 						}
 					}
 				}if (relleno == false) {
 					tipos.add(new Tipo_de_Contador(ArrayAscii[i]));
 					tipos.get(i).sumarAlContador();
 				}
-				
+				System.out.println("Tipo("+tipos.get(i).getNumero()+"). Contador va por: "+tipos.get(i).getCont().getContador());
 			}
 			
 		}
@@ -178,8 +179,9 @@ public class Default {
 				contad++;
 				Reduccion.add(tipos.get(i).getNumero());
 			}while(contad<=tipos.get(i).getCont().getContador());
+			System.out.println(Reduccion.get(i));
 		}
-		System.out.println(Reduccion);
+		
 		
 	}
 }
