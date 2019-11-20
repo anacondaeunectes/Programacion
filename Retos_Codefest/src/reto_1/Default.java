@@ -28,7 +28,7 @@ public class Default {
 //		System.out.println(titulo.codePointAt(2));
 		
 		
-		String abcde = "abcdefghijklmnñopqrstuvwxyz";
+		String abcde = "abcdefghijklmnï¿½opqrstuvwxyz";
 		System.out.println(abcde.indexOf(ArrayTitulo[2]));
 		
 		ArrayList<Character> Repeticiones = new ArrayList<Character>();
@@ -116,24 +116,70 @@ public class Default {
 		
 		ArrayList <Tipo_de_Contador> tipos = new ArrayList<Tipo_de_Contador>();
 		
+//		for (int i = 0; i < ArrayAscii.length; i++) {
+//			if (i == 0) {
+//				Reduccion.add(i);
+//				tipos.add(new Tipo_de_Contador(ArrayAscii[i]));
+//				tipos.get(0).sumarAlContador();
+//			}else {
+//				if (ArrayAscii[i] == ArrayAscii[i-1]) {
+//					b.sumarAlContador();
+//					if (b.getCont().getContador() < ArrayAscii[i]) {
+//						Reduccion.add(i);
+//					}
+//				}
+//			}
+//		}
+//		
+//		for (int i = 0; i < ArrayAscii.length; i++) {
+//			if (i == 0) {
+//				Reduccion.add(i);
+//				tipos.add(new Tipo_de_Contador(ArrayAscii[i]));
+//				tipos.get(0).sumarAlContador();
+//			}else {
+//				if (ArrayAscii[i] == ArrayAscii[i-1]) {
+//					b.sumarAlContador();
+//					if (b.getCont().getContador() < ArrayAscii[i]) {
+//						Reduccion.add(i);
+//					}
+//				}
+//			}
+//		}
+		
+		
 		for (int i = 0; i < ArrayAscii.length; i++) {
 			if (i == 0) {
 				Reduccion.add(i);
-				tipos.add(new Tipo_de_Contador(i));
+				tipos.add(new Tipo_de_Contador(ArrayAscii[i]));
 				tipos.get(0).sumarAlContador();
-				
-				
 			}else {
-				if (ArrayAscii[i] == ArrayAscii[i-1]) {
-					b.sumarAlContador();
-					if (b.getCont().getContador() < ArrayAscii[i]) {
-						Reduccion.add(i);
+				boolean relleno=false;
+				for (int j = 0; j < tipos.size(); j++) {				
+					if (ArrayAscii[i] == tipos.get(j).getNumero()) {		//va a ver si es de un tipo de contador
+						relleno=true;
+						if (ArrayAscii[i] == ArrayAscii[i-1]) {				//si es igual al anterior elemento del ArrayAscii, lo guarda en el mismo tipo de contador, sino crea uno nuevo
+							tipos.get(j).sumarAlContador();
+						}else {
+							tipos.add(new Tipo_de_Contador(ArrayAscii[i]));
+							tipos.get(j).sumarAlContador();
+						}
 					}
+				}if (relleno == false) {
+					tipos.add(new Tipo_de_Contador(ArrayAscii[i]));
+					tipos.get(i).sumarAlContador();
 				}
+				
 			}
+			
 		}
-		
-		
+		for (int i = 0; i < tipos.size(); i++) {
+			int contad=0;
+			do {
+				contad++;
+				Reduccion.add(tipos.get(i).getNumero());
+			}while(contad<=tipos.get(i).getCont().getContador());
+		}
+		System.out.println(Reduccion);
 		
 	}
 }
